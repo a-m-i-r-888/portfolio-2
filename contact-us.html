@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- own Css -->
+  <link rel="stylesheet" href="Css/contact-us.css">
+  <!-- current page Js -->
+  <script defer src="Js/currentPage.js"></script>
+  <!-- horizontal scrollbar Js -->
+  <script defer src="Js/horizontalScrollbar.js"></script>
+  <!-- smooth scroll Js -->
+  <script defer src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+  <script defer src="Js/smooth-scroll.js"></script>
+  <!-- sticky nav Js -->
+  <!-- <script defer src="Js/stickyNav.js"></script> -->
+  <!-- Tabbed componet -->
+  <!-- <script defer src="Js/services-componet.js"></script> -->
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" />
+  <!-- own Js -->
+  <!-- <script defer src="Js/app.js"></script> -->
+  <!-- map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <script defer src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script defer src="Js/map.js"></script>
+  <title>contact-us</title>
+</head>
+
+<body>
+  <header>
+    <!-- mouse cursor -->
+    <!-- <div class="cursor-container">
+      <div class="cursor"></div>
+    </div> -->
+    <!-- horizontal scrollbar -->
+    <div class="scroll-progress"></div>
+    <!-- header -->
+    <div class="top-header-content">
+      <div class="top-header-logo">
+        <img src="Images/logo.webp" alt="logo" />
+      </div>
+      <div class="top-header-searchbar">
+        <form action="">
+          <input type="text" placeholder="search">
+          <button>
+            <i class="ri-search-line"></i>
+          </button>
+        </form>
+      </div>
+      <div class="top-header-get-start">
+        <div class="user">
+          <ul>
+            <li>
+              <a href="#">
+                <i class="ri-heart-line"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="ri-user-line"></i> </a>
+            </li>
+          </ul>
+        </div>
+        <div class="shop">
+          <div class="shop-num">
+            <p>3</p>
+          </div>
+          <i class="ri-shopping-cart-line"></i>
+        </div>
+      </div>
+    </div>
+    <div class="top-header-content-part-2">
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html" class="nav-link">خانه </a></li>
+          <li><a href="products.html" class="nav-link">محصولات</a></li>
+          <li><a href="section2" class="nav-link">برندها</a></li>
+          <li><a href="#" class="nav-link">پیشنهادات ویژه</a></li>
+          <li><a href="section5" class="nav-link">وبلاگ</a></li>
+          <li><a href="about-us.html" class="nav-link">درباره ما</a></li>
+          <li><a href="contact-us.html" class="nav-link">تماس با ما</a></li>
+        </ul>
+      </nav>
+      <div class="sort">
+        <button><i class="ri-menu-line"></i>دسته‌بندی محصولات</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="first-section">
+      <div class="first-section-content">
+        <div class="first-section-title">
+          <h2>تماس <span>با ما</span></h2>
+          <p>ما همیشه آماده پاسخگویی به سوالات و پیشنهادات شما هستیم</p>
+        </div>
+        <div class="information-form-container">
+          <div class="right-container">
+            <div class="right-up">
+              <div class="right-up-title">
+                <h3>راه‌های ارتباطی</h3>
+                <div class="bottom-line"></div>
+              </div>
+              <div class="way-contact">
+                <div>
+                  <div>
+                    <ul>
+                      <li><i class="ri-mail-line"></i></li>
+                    </ul>
+                    <h3>ایمیل</h3>
+                    <a href="#">info@abzarmarket.com</a>
+                    <p>پاسگویی در کمتر از ۲۴ ساعت</p>
+                  </div>
+                  <div>
+                    <ul>
+                      <li><i class="ri-phone-line"></i></li>
+                    </ul>
+                    <h3>تماس تلفنی</h3>
+                    <a href="#">021-12345678</a>
+                    <p>شنبه تا پنجشنبه ۸ تا ۱۸</p>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <ul>
+                      <li><i class="ri-customer-service-2-line"></i></li>
+                    </ul>
+                    <h3>پشتیبانی آنلاین</h3>
+                    <p>از طریق چت آنلاین سایت پاسخگوی شما هستیم</p>
+                  </div>
+                  <div>
+                    <ul>
+                      <li><i class="ri-map-pin-line"></i></li>
+                    </ul>
+                    <h3>آدرس فروشگاه</h3>
+                    <p>تهران، خیابان جمهوری، پلاک ۱۳۴ واحد ۴</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="map-section">
+              <div id="map"></div>
+            </div>
+          </div>
+          <div class="left-container">
+            <form action="">
+              <div class="left-title">
+                <h3>راه‌های ارتباطی</h3>
+                <div class="bottom-line"></div>
+              </div>
+              <div class="name-number-div">
+                <div class="name-div">
+                  <i class="ri-user-line"></i>
+                  <input type="text" class="input-name" placeholder="نام و نام‌خانوادگی">
+                </div>
+                <div class="number-div">
+                  <i class="ri-smartphone-line"></i>
+                  <input type="tel" class="input-number" placeholder="شماره مبایل">
+                </div>
+              </div>
+              <div class="email-discribe-div">
+                <div class="email-container">
+                  <i class="ri-mail-line"></i>
+                  <input type="email" class="input-email" placeholder="ایمیل">
+                </div>
+                <div class="select-container">
+                  <select>
+                    <option selected disabled>موضوع پیام</option>
+                    <option>پشتیبانی</option>
+                    <option>فروش</option>
+                    <option>همکاری</option>
+                    <option>سایر</option>
+                  </select>
+                  <i id="arrow" class="ri-arrow-down-s-line"></i>
+                  <i id="subject" class="ri-information-line"></i>
+                </div>
+                <div class="textarea-container">
+                  <i class="ri-ball-pen-line"></i>
+                  <textarea name="" id="" class="textarea" placeholder="متن پیام شما....."></textarea>
+                </div>
+              </div>
+              <input type="submit" value="ارسال پیام" class="submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="second-section">
+      <div class="second-section-content">
+        <div class="features-second-container">
+          <div class="icon-box">
+            <ul>
+              <li><i class="ri-truck-line"></i></li>
+            </ul>
+          </div>
+          <div class="features">
+            <h3>ارسال سریع</h3>
+            <p>ارسال در کمترین زمان</p>
+          </div>
+        </div>
+        <div class="features-second-container">
+          <div class="icon-box">
+            <ul>
+              <li><i class="ri-lock-star-line"></i></li>
+            </ul>
+          </div>
+          <div class="features">
+            <h3>ضمانت بازگشت وجه</h3>
+            <p>تا ۷ روز بعد از خرید</p>
+          </div>
+        </div>
+        <div class="features-second-container">
+          <div class="icon-box">
+            <ul>
+              <li><i class="ri-shield-check-line"></i></li>
+            </ul>
+          </div>
+          <div class="features">
+            <h3>ضمانت اصالت کالا</h3>
+            <p>تمامی محصولات اصل و با ضمانت</p>
+          </div>
+        </div>
+        <div class="features-second-container">
+          <div class="icon-box">
+            <ul>
+              <li><i class="ri-customer-service-line"></i></li>
+            </ul>
+          </div>
+          <div class="features">
+            <h3>پشتیبانی سریع</h3>
+            <p>پلسخگویی در کمترین زمان</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div class="logo-icon-container">
+        <div class="logo-container">
+          <img src="Images/logo.webp" alt="image">
+          <p>مرجع تخصصی فروش انواع ابزارآلات با بهترین قیمت و تضمین ضمانت کالا</p>
+        </div>
+        <div class="footer-icon-container">
+          <i class="ri-instagram-line"></i>
+          <i class="ri-telegram-2-fill"></i>
+          <i class="ri-video-line"></i>
+          <i class="ri-whatsapp-line"></i>
+        </div>
+      </div>
+      <div class="info-container">
+        <div class="contact-fast">
+          <div>
+            <h2>دسترسی سریع</h2>
+          </div>
+          <div>
+            <a href="#">صفحه اصلی</a>
+            <a href="#">محصولات</a>
+            <a href="#">پروژه‌ها</a>
+            <a href="#">وبلاگ</a>
+            <a href="#">تماس با ما</a>
+          </div>
+        </div>
+        <div class="services">
+          <div>
+            <h2>خدمات مشتریان</h2>
+          </div>
+          <div>
+            <a href="#">سوالات متداول</a>
+            <a href="#">شرایط بازگشت کالا</a>
+            <a href="#">حریم خصوصی</a>
+            <a href="#">نحوه ارسال سفارش</a>
+            <a href="#">پیگیری سفارش</a>
+          </div>
+        </div>
+        <di class="contact-us">
+          <div>
+            <h2>اطلاعات تماس</h2>
+          </div>
+          <div>
+            <a href="#"><i class="ri-phone-line"></i>09129753462</a>
+            <a href="#"><i class="ri-mail-line"></i>info@abzarmarket.com</a>
+            <a href="#"><i class="ri-map-pin-2-line"></i>تهران، خیابان جمهوری، پلاک ۱۳۴ واحد ۴</a>
+            <a href="#"><i class="ri-time-line"></i>شنبه تا پنجشنبه ۸ تا ۱۸</a>
+          </div>
+        </di>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>طراحی شده توسط اعضای تیم آکیاوب، تمامی حقوق این سایت محفوظ است ۱۴۰۴ ©</p>
+    </div>
+  </footer>
+</body>
+
+</html>
